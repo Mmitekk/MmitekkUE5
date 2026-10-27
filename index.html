@@ -497,7 +497,7 @@
       <h1 data-i18n-html="hero.title">Плагины<br>&amp; инструменты<span class="caret">_</span></h1>
       <p class="hero-sub" data-i18n="hero.sub">Открытые плагины и инструменты для Unreal Engine 5: C++, Blueprint и Python. Для редактора и рантайма — бесплатно и с исходниками.</p>
       <div class="hero-stats">
-        <span class="stat mono"><b>10</b> <span data-i18n="stat.repos">репозиториев</span></span>
+        <span class="stat mono"><b>11</b> <span data-i18n="stat.repos">репозиториев</span></span>
         <span class="stat mono"><b>UE 5.2 — 5.8</b></span>
         <span class="stat mono"><b>C++ · BP · Python</b></span>
       </div>
@@ -514,11 +514,21 @@
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="projects.title">Репозитории</h2>
-          <span class="mono">10</span>
+          <span class="mono">11</span>
         </div>
 
-        <a class="repo reveal" href="https://github.com/Mmitekk/WaterFaucet" target="_blank" rel="noopener">
+        <a class="repo reveal" href="https://github.com/Mmitekk/CrowVFXUE5" target="_blank" rel="noopener">
           <span class="num mono">01</span>
+          <span class="main">
+            <span class="name">CrowVFXUE5</span>
+            <span class="desc" data-i18n="repo.crow">Ворона (или стая) на снеговике: каркает, следит за игроком и улетает с криком при приближении. Три C++ актора, открытые для Blueprint.</span>
+          </span>
+          <span class="tags mono">Runtime · UE 5.2</span>
+          <span class="arrow mono">↗</span>
+        </a>
+
+        <a class="repo reveal" style="--d:.04s" href="https://github.com/Mmitekk/WaterFaucet" target="_blank" rel="noopener">
+          <span class="num mono">02</span>
           <span class="main">
             <span class="name">WaterFaucet</span>
             <span class="desc" data-i18n="repo.faucet">Струя воды из крана для UE 5.8: Niagara-система со струёй и брызгами, материал воды с настройкой цвета и металличности.</span>
@@ -527,8 +537,8 @@
           <span class="arrow mono">↗</span>
         </a>
 
-        <a class="repo reveal" style="--d:.04s" href="https://github.com/Mmitekk/ShowerNiagara" target="_blank" rel="noopener">
-          <span class="num mono">02</span>
+        <a class="repo reveal" style="--d:.08s" href="https://github.com/Mmitekk/ShowerNiagara" target="_blank" rel="noopener">
+          <span class="num mono">03</span>
           <span class="main">
             <span class="name">ShowerNiagara</span>
             <span class="desc" data-i18n="repo.shower">Эффект душа для UE 5.8: капли, брызги, пар и зацикленный звук — C++ актор + BP_Shower с нодами Start/Stop Shower.</span>
@@ -537,8 +547,8 @@
           <span class="arrow mono">↗</span>
         </a>
 
-        <a class="repo reveal" style="--d:.08s" href="https://github.com/Mmitekk/BirdFlock" target="_blank" rel="noopener">
-          <span class="num mono">03</span>
+        <a class="repo reveal" style="--d:.12s" href="https://github.com/Mmitekk/BirdFlock" target="_blank" rel="noopener">
+          <span class="num mono">04</span>
           <span class="main">
             <span class="name">BirdFlock</span>
             <span class="desc" data-i18n="repo.birdflock">Стаи летающих птиц в стиле The Long Dark: траектории по сплайнам, три режима полёта, триггер приближения с вероятностью и звуки на каждую птицу.</span>
@@ -547,8 +557,8 @@
           <span class="arrow mono">↗</span>
         </a>
 
-        <a class="repo reveal" style="--d:.12s" href="https://github.com/Mmitekk/TabGuardUE5" target="_blank" rel="noopener">
-          <span class="num mono">04</span>
+        <a class="repo reveal" style="--d:.16s" href="https://github.com/Mmitekk/TabGuardUE5" target="_blank" rel="noopener">
+          <span class="num mono">05</span>
           <span class="main">
             <span class="name">TabGuardUE5</span>
             <span class="desc" data-i18n="repo.tabguard">Краш-сейф автосейв открытых вкладок редактора и восстановление в один клик. Снапшот в отдельном файле переживает краши, плюс 5 ручных слотов.</span>
@@ -557,8 +567,8 @@
           <span class="arrow mono">↗</span>
         </a>
 
-        <a class="repo reveal" style="--d:.16s" href="https://github.com/Mmitekk/GameplayTagFilterUE5" target="_blank" rel="noopener">
-          <span class="num mono">05</span>
+        <a class="repo reveal" style="--d:.2s" href="https://github.com/Mmitekk/GameplayTagFilterUE5" target="_blank" rel="noopener">
+          <span class="num mono">06</span>
           <span class="main">
             <span class="name">GameplayTagFilterUE5</span>
             <span class="desc" data-i18n="repo.gametag">Пять Blueprint-нод, которые фильтруют акторы по тегам из массива или мапы одной нодой — вместо цепочки ForEach → Has Tag → Branch.</span>
@@ -567,8 +577,8 @@
           <span class="arrow mono">↗</span>
         </a>
 
-        <a class="repo reveal" style="--d:.2s" href="https://github.com/Mmitekk/JsonObjectSerializer" target="_blank" rel="noopener">
-          <span class="num mono">06</span>
+        <a class="repo reveal" style="--d:.24s" href="https://github.com/Mmitekk/JsonObjectSerializer" target="_blank" rel="noopener">
+          <span class="num mono">07</span>
           <span class="main">
             <span class="name">JsonObjectSerializer</span>
             <span class="desc" data-i18n="repo.json">Blueprint-ноды глубокой сериализации UObject в JSON-строку и обратно: C++-рефлексия обходит все UPROPERTY, включая вложенные объекты и массивы.</span>
@@ -577,8 +587,8 @@
           <span class="arrow mono">↗</span>
         </a>
 
-        <a class="repo reveal" style="--d:.24s" href="https://github.com/Mmitekk/HISMInstanceEditor" target="_blank" rel="noopener">
-          <span class="num mono">07</span>
+        <a class="repo reveal" style="--d:.28s" href="https://github.com/Mmitekk/HISMInstanceEditor" target="_blank" rel="noopener">
+          <span class="num mono">08</span>
           <span class="main">
             <span class="name">HISMInstanceEditor</span>
             <span class="desc" data-i18n="repo.hism">Конвертация статик-мешей в иерархические инстансы (HISM) с поддержкой World Partition.</span>
@@ -587,8 +597,8 @@
           <span class="arrow mono">↗</span>
         </a>
 
-        <a class="repo reveal" style="--d:.28s" href="https://github.com/Mmitekk/GasStoveForUE5" target="_blank" rel="noopener">
-          <span class="num mono">08</span>
+        <a class="repo reveal" style="--d:.32s" href="https://github.com/Mmitekk/GasStoveForUE5" target="_blank" rel="noopener">
+          <span class="num mono">09</span>
           <span class="main">
             <span class="name">GasStoveForUE5</span>
             <span class="desc" data-i18n="repo.gas">VFX для конфорки газовой плиты в Unreal Engine 5: пламя с регулировкой интенсивности, материалы и скрипты.</span>
@@ -597,8 +607,8 @@
           <span class="arrow mono">↗</span>
         </a>
 
-        <a class="repo reveal" style="--d:.32s" href="https://github.com/Mmitekk/SubsystemEditor" target="_blank" rel="noopener">
-          <span class="num mono">09</span>
+        <a class="repo reveal" style="--d:.36s" href="https://github.com/Mmitekk/SubsystemEditor" target="_blank" rel="noopener">
+          <span class="num mono">10</span>
           <span class="main">
             <span class="name">SubsystemEditor</span>
             <span class="desc" data-i18n="repo.subed">Подсистема (Subsystem) для редактора Unreal Engine — готовая база для собственных Editor-подсистем.</span>
@@ -607,8 +617,8 @@
           <span class="arrow mono">↗</span>
         </a>
 
-        <a class="repo reveal" style="--d:.36s" href="https://github.com/Mmitekk/SubsystemGameInstance" target="_blank" rel="noopener">
-          <span class="num mono">10</span>
+        <a class="repo reveal" style="--d:.4s" href="https://github.com/Mmitekk/SubsystemGameInstance" target="_blank" rel="noopener">
+          <span class="num mono">11</span>
           <span class="main">
             <span class="name">SubsystemGameInstance</span>
             <span class="desc" data-i18n="repo.subgi">Простой плагин для простой задачи: Game Instance Subsystem, доступный из Blueprint.</span>
@@ -686,6 +696,7 @@
         'hero.sub': 'Открытые плагины и инструменты для Unreal Engine 5: C++, Blueprint и Python. Для редактора и рантайма — бесплатно и с исходниками.',
         'stat.repos': 'репозиториев',
         'projects.title': 'Репозитории',
+        'repo.crow': 'Ворона (или стая) на снеговике: каркает, следит за игроком и улетает с криком при приближении. Три C++ актора, открытые для Blueprint.',
         'repo.faucet': 'Струя воды из крана для UE 5.8: Niagara-система со струёй и брызгами, материал воды с настройкой цвета и металличности.',
         'repo.shower': 'Эффект душа для UE 5.8: капли, брызги, пар и зацикленный звук — C++ актор + BP_Shower с нодами Start/Stop Shower.',
         'repo.birdflock': 'Стаи летающих птиц в стиле The Long Dark: траектории по сплайнам, три режима полёта, триггер приближения с вероятностью и звуки на каждую птицу.',
@@ -711,6 +722,7 @@
         'hero.sub': 'Open-source plugins and tools for Unreal Engine 5: C++, Blueprint and Python. For the editor and runtime — free, with sources.',
         'stat.repos': 'repositories',
         'projects.title': 'Repositories',
+        'repo.crow': 'A raven (or a flock) on a snowman: it caws, watches the player and flies away cawing when approached. Three C++ actors, fully exposed to Blueprint.',
         'repo.faucet': 'A water faucet jet for UE 5.8: a Niagara system with stream and splash droplets, and a water material with adjustable color and metallic look.',
         'repo.shower': 'A shower effect for UE 5.8: droplets, splash, steam and a looping sound — a C++ actor plus BP_Shower with Start/Stop Shower nodes.',
         'repo.birdflock': 'The Long Dark-style flying bird flocks: spline flight paths, three flight modes, a proximity trigger with spawn chance and per-bird sounds.',
@@ -767,8 +779,21 @@
 
     // ---------- repo details (modal) ----------
     var REPO_DATA = {
+      'https://github.com/Mmitekk/CrowVFXUE5': {
+        num: '01', name: 'CrowVFXUE5', tags: 'Runtime · UE 5.2',
+        ru: [
+          'Ворона, сидящая на снеговике: время от времени каркает, следит за игроком, а при приближении пугается и улетает с криком и хлопками крыльев. Три C++ актора, полностью открытые для Blueprint: <b>BP_Crow</b> (ворона), <b>BP_Snowman</b> (снеговик из одной статической сетки со свободно перемещаемой точкой присады) и <b>BP_CrowTrigger</b> (сфера, пугающая ворон при входе игрока). Есть демо-карта L_CrowDemo.',
+          'Стая — отдельный актор <b>BP_CrowFlock</b>, не связанный со снеговиком: расставляет птиц вдоль сплайна (линия, дуга, круг) с джиттером и записью на каждую птицу — направление полёта, задержка, с криком или молча, масштаб. Разгоняет стаю при входе игрока в Scare Radius, по Begin Play с задержкой или вручную функцией Scare All; есть Respawn Flock и события On Flock Spawned / On Flock Scared.',
+          'Звук — три независимые группы со своей громкостью и аттенюацией: Idle Caw (карканье со случайной паузой 3–9 с), Alarm (в момент испуга) и Take Off (хлопки крыльев), плюс джиттер тона, чтобы карканье не повторялось. Auto Align Mesh Forward сам разворачивает меш по направлению полёта (для SK_Crow — ровно −90°). Требуется пак Animal Variety Pack (ворона, анимации, звуки). UE 5.2.'
+        ],
+        en: [
+          'A raven perched on a snowman: it caws from time to time, watches the player, and when approached it gets scared and flies away cawing with wing flaps. Three C++ actors fully exposed to Blueprint: <b>BP_Crow</b> (the raven), <b>BP_Snowman</b> (a snowman made of a single static mesh with a freely movable perch point) and <b>BP_CrowTrigger</b> (a sphere that scares crows on player entry). A demo map, L_CrowDemo, is included.',
+          'The flock is a separate <b>BP_CrowFlock</b> actor, independent of the snowman: it places birds along a spline (line, arc, circle) with jitter and a per-bird record — flight direction, delay, cawing or silent, scale. The flock takes off when the player enters the Scare Radius, on Begin Play with a delay, or manually via Scare All; Respawn Flock and the On Flock Spawned / On Flock Scared events are there too.',
+          'Sound comes in three independent groups with their own volume and attenuation: Idle Caw (cawing with a random 3–9 s pause), Alarm (at the scare moment) and Take Off (wing flaps), plus a pitch jitter so caws never sound identical. Auto Align Mesh Forward rotates the mesh to face the flight direction (exactly −90° for SK_Crow). Requires the Animal Variety Pack (crow, animations, sounds). UE 5.2.'
+        ]
+      },
       'https://github.com/Mmitekk/WaterFaucet': {
-        num: '01', name: 'WaterFaucet', tags: 'VFX · UE 5.8',
+        num: '02', name: 'WaterFaucet', tags: 'VFX · UE 5.8',
         ru: [
           'Эффект водопроводного крана для Unreal Engine 5.8: Niagara-система <b>NS_Shower</b> с двумя эмиттерами — Stream (струя) и Splash (капли-брызги в точке удара). Вода — круглые капли с полупрозрачным материалом <b>M_Water</b>: настраиваются цвет, прозрачность, металличность, шероховатость и specular; в комплекте два пресета-инстанса — обычная вода и «зеркальная» металлическая.',
           'Актор <b>BP_ShowerHead</b> — головка крана с мешем и Niagara-компонентом: все параметры доступны в Details и из блюпринта. Есть демо-уровень L_ShowerDemo с небом, солнцем и землёй. Материал Default Lit — уровню нужны направленный свет и skylight, отражения берутся из сцены.',
@@ -781,7 +806,7 @@
         ]
       },
       'https://github.com/Mmitekk/ShowerNiagara': {
-        num: '02', name: 'ShowerNiagara', tags: 'VFX · UE 5.8',
+        num: '03', name: 'ShowerNiagara', tags: 'VFX · UE 5.8',
         ru: [
           'Самодостаточный эффект душа для Unreal Engine 5.8: латунный душ из примитивов, круглые капли воды (Niagara) с дугой струи и брызгами у пола, отдельные системы пара и тумана с настройкой плотности, размера и цвета, зацикленный звук воды с громкостью и радиусом слышимости. Свои меши, материалы и звук — из движка нужен только плагин Niagara.',
           'C++ актор <b>ShowerActor</b> + блюпринт-наследник <b>BP_Shower</b> с нодами категории ShowerFX: Start Shower / Stop Shower, раздельное отображение воды, брызг и пара, Set Flow Rate и Set Steam Rate на лету. Все группы параметров (Water, Splash, Steam, Sound, Materials) — в Details; цвет и прозрачность меняются материал-инстансами в один клик.',
@@ -794,7 +819,7 @@
         ]
       },
       'https://github.com/Mmitekk/BirdFlock': {
-        num: '03', name: 'BirdFlock', tags: 'Runtime · UE 5.2 – 5.8',
+        num: '04', name: 'BirdFlock', tags: 'Runtime · UE 5.2 – 5.8',
         ru: [
           'Стаи летающих птиц в стиле The Long Dark: поставьте на уровень блюпринт <b>BirdFlightPath</b> и отредактируйте его сплайн — при приближении игрока с настраиваемой вероятностью появляется стая, летит по траектории, кричит, а затем либо улетает из виду, либо выгружается по дистанции. Меш, анимацию и звуки подключаете свои — например, пак птиц с Fab.',
           'Три режима полёта — <b>Loop</b>, <b>Single Pass</b> и <b>Ping-Pong</b>; точки сплайна правятся прямо во вьюпорте, есть пресеты Circle и Line. Триггер приближения — кольцо дистанций [мин..макс] с вероятностью появления. Звук: слот на каждую птицу (длина массива = количество птиц) плюс опциональный фоновый loop; для сейвов — единоразовый режим с BP-событием в момент фактического появления стаи.',
@@ -807,7 +832,7 @@
         ]
       },
       'https://github.com/Mmitekk/TabGuardUE5': {
-        num: '04', name: 'TabGuardUE5', tags: 'Editor · UE 5.8',
+        num: '05', name: 'TabGuardUE5', tags: 'Editor · UE 5.8',
         ru: [
           'Редактор UE после краша часто теряет открытые вкладки: штатный диалог «Restore tabs?» появляется не всегда, а конфиги layout затираются. TabGuard хранит список открытых ассетов в собственном файле <b>Saved/TabGuard/TabSnapshot.json</b> с ротацией .bak — движок этот файл не трогает, поэтому снапшот переживает и краш, и сброс конфигов.',
           'Список автосохраняется при каждом открытии и закрытии вкладки (дебаунс 0.5 с). На тулбар Level Editor и в меню Window добавляются кнопки <b>Save Tabs</b> / <b>Restore Tabs</b> — после падения редактора вкладки возвращаются в один клик.',
@@ -820,7 +845,7 @@
         ]
       },
       'https://github.com/Mmitekk/GameplayTagFilterUE5': {
-        num: '05', name: 'GameplayTagFilterUE5', tags: 'Runtime · UE 5.2 – 5.8',
+        num: '06', name: 'GameplayTagFilterUE5', tags: 'Runtime · UE 5.2 – 5.8',
         ru: [
           'Пять Blueprint-нод, которые достают акторов по тегам из массива или мапы одной нодой — вместо цепочки ForEach → Actor Has Tag → Branch → Add. Работают со стандартными <b>Actor Tags</b> (список FName на панели актора), никакие дополнительные системы не нужны.',
           'Ноды: <b>Filter Actors by Tag / by Tags</b> (совпадение Any или All), <b>Find Actors in Tag Map</b> (тег → актор), <b>Find Actors in Tag Groups</b> (тег → несколько акторов, через массив структур — Blueprint запрещает Map с массивом внутри) и <b>Filter Actors Map by Tag</b> (актор → его теги). У каждой ноды есть выходной массив и <b>MatchCount</b> — «сколько нашёл» для быстрой проверки.',
@@ -833,7 +858,7 @@
         ]
       },
       'https://github.com/Mmitekk/JsonObjectSerializer': {
-        num: '06', name: 'JsonObjectSerializer', tags: 'Runtime · UE 5.8+',
+        num: '07', name: 'JsonObjectSerializer', tags: 'Runtime · UE 5.8+',
         ru: [
           'Две Blueprint-ноды: <b>Make Json From Object</b> сериализует любой UObject в JSON-строку, <b>Spawn Object From Json</b> собирает объект обратно через NewObject. C++-рефлексия обходит все UPROPERTY, включая вложенные UObject* и TArray; в JSON пишется поле __ObjectClassPath, по которому десериализатор восстанавливает класс.',
           'В v3.0 исправлена проблема циклических и общих ссылок (коллекция квестов → цель → обратно на коллекцию): каждый объект получает стабильный <b>__ObjectId</b>, повторные встречи сериализуются компактной заглушкой __ObjectRef, а десериализация идёт в два прохода — «создать все → заполнить все», поэтому циклы разворачиваются корректно.',
@@ -846,7 +871,7 @@
         ]
       },
       'https://github.com/Mmitekk/HISMInstanceEditor': {
-        num: '07', name: 'HISMInstanceEditor', tags: 'Editor · UE 5.2',
+        num: '08', name: 'HISMInstanceEditor', tags: 'Editor · UE 5.2',
         ru: [
           'Editor-плагин для правки отдельных инстансов ISM/HISM прямо во вьюпорте. Главная фишка — режим как у <b>Packed Level Actor</b>: Unpack превращает каждый инстанс хоста в обычного актёра EDIT_&lt;хост&gt;_&lt;i&gt; (меш, материалы, физмат и коллизия копируются), дальше правите их обычными гизмо, а Pack записывает трансформы обратно в те же хосты.',
           'Хосты сохраняются как акторы — <b>World Partition не ломается</b>, а операции идут в транзакциях: Ctrl+Z работает. Есть конвертер статик-мешей в HISM: выделенные StaticMeshActor группируются по WP-ячейке, мешу и физмату, под каждую группу создаётся блюпринт-хост.',
@@ -859,7 +884,7 @@
         ]
       },
       'https://github.com/Mmitekk/GasStoveForUE5': {
-        num: '08', name: 'GasStoveForUE5', tags: 'VFX · Python · UE 5.2',
+        num: '09', name: 'GasStoveForUE5', tags: 'VFX · Python · UE 5.2',
         ru: [
           'VFX синего пламени газовой конфорки: кольцо из ~22 объёмных язычков с бело-голубым корнем, мерцанием и покачиванием, свечение основания и синий свет. Без Niagara: пламя собрано на <b>инстансированных меш-плоскостях с аддитивным материалом</b>, поэтому одинаково стабильно выглядит с любого ракурса и почти ничего не стоит по производительности.',
           'Актор <b>AGasStoveBurnerFlame</b> с C++-логикой: SetLit зажигает и гасит горение, SetGasLevel меняет интенсивность. Пак ставится в проект Python-установщиком — в один клик через батник или прямо из открытого редактора, без ручного копирования.',
@@ -872,7 +897,7 @@
         ]
       },
       'https://github.com/Mmitekk/SubsystemEditor': {
-        num: '09', name: 'SubsystemEditor', tags: 'Editor · UE 5.0 – 5.8',
+        num: '10', name: 'SubsystemEditor', tags: 'Editor · UE 5.0 – 5.8',
         ru: [
           '<b>USubsystemEditor</b> — C++ базовый класс, который разрешает создавать Editor Subsystem прямо в Blueprint: штатно движок не даёт наследовать Blueprint-классы от UEditorSubsystem. Встроены события жизненного цикла <b>On Initialize / On Deinitialize</b> и типобезопасная нода Get Custom Subsystem.',
           'В репозитории лежит готовый Editor-модуль целиком: Build.cs, файлы модуля, класс. Скопируйте в проект и переименуйте плейсхолдеры под своё имя проекта — никакой обвязки руками. Важно: подсистема живёт только в редакторе, поэтому модуль должен быть типа <b>Editor</b> — из упакованной игры он вырезается.',
@@ -885,7 +910,7 @@
         ]
       },
       'https://github.com/Mmitekk/SubsystemGameInstance': {
-        num: '10', name: 'SubsystemGameInstance', tags: 'Runtime · C++',
+        num: '11', name: 'SubsystemGameInstance', tags: 'Runtime · C++',
         ru: [
           '<b>USubsystemGameInstance</b> — C++ базовый класс, позволяющий создавать Game Instance Subsystem прямо в Blueprint (штатно движок этого не умеет) с событиями <b>On Initialize / On Deinitialize</b>.',
           'Главная удобная деталь: для каждого созданного Blueprint-подкласса движок сам генерирует персональную ноду доступа — <b>Get TimeSubsystem</b> и т.п. — с уже типизированным выходным пином: без дропдаунов и кастов. Рядом остаётся легаси-нода Get Custom Subsystem для случаев, когда класс выбирается в рантайме.',
