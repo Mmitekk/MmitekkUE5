@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MmitekkUE5 portfolio site</title>
+<style>
+:root{
+  --bg:#f4f5f8; --panel:#ffffff; --ink:#111827; --muted:#6b7280; --line:#e4e7ec;
+  --accent:#4f46e5; --accent-soft:#eef2ff; --code-bg:#0f172a; --code-ink:#e2e8f0;
+  --ok:#047857; --shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0b1020; --panel:#141b2d; --ink:#e7eaf0; --muted:#98a2b3; --line:#263149;
+    --accent:#8b8cf7; --accent-soft:#1b2340; --code-bg:#070b16; --code-ink:#d8dee9;
+    --ok:#34d399; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35); }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 20px 72px}
+header.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:22px 24px;box-shadow:var(--shadow);margin-bottom:18px}
+header.card h1{margin:0 0 4px;font-size:24px;letter-spacing:-.01em}
+header.card .sub{color:var(--muted);font-size:13px;word-break:break-all}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:var(--accent-soft);color:var(--ink);border:1px solid var(--line);
+  border-radius:999px;padding:3px 11px;font-size:12.5px}
+.chip b{font-weight:600;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:22px;align-items:start}
+.toc{position:sticky;top:18px;background:var(--panel);border:1px solid var(--line);
+  border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+.toc-t{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.toc ol{margin:0;padding-left:18px}
+.toc li{margin:4px 0;font-size:13px;line-height:1.45}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+.toc li.toc-sec{margin:6px 0 6px 0;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.toc li.toc-sec a{font-weight:600}
+.state{background:var(--accent-soft);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:12px;padding:14px 18px;margin-bottom:18px}
+.state h2{margin:0 0 6px;font-size:15px}
+.state p{margin:0 0 4px}
+.state p:last-child{margin-bottom:0}
+.state strong{color:var(--accent)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:18px 22px;margin-bottom:16px;box-shadow:var(--shadow);scroll-margin-top:16px}
+.card h2{margin:0 0 8px;font-size:16px}
+.card h3{margin:14px 0 6px;font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
+.card p,.card li{margin:6px 0}
+.card table td:nth-child(2){white-space:nowrap}
+.task{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:18px 22px 8px;margin-bottom:16px;box-shadow:var(--shadow);scroll-margin-top:16px}
+.task-h{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.task-n{flex:0 0 auto;min-width:26px;height:26px;border-radius:8px;background:var(--accent);color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.task-h h2{margin:0;font-size:18px;letter-spacing:-.01em}
+.task-b h3{margin:18px 0 6px;font-size:14px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
+.task-b p,.task-b li{margin:6px 0}
+ul.lst,ol.lst{margin:6px 0;padding-left:22px}
+ul.lst ul,ol.lst ul,ul.lst ol,ol.lst ol{margin:4px 0}
+.check{color:var(--muted)}
+.check.on{color:var(--ok)}
+code{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+  padding:1px 5px;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre{background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:13px 15px;
+  overflow:auto;font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre code{background:none;border:0;padding:0;color:inherit}
+a{color:var(--accent)}
+hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+blockquote{margin:10px 0;padding:4px 16px;border-left:3px solid var(--line);color:var(--muted)}
+.tw{overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+th{background:var(--accent-soft)}
+footer{margin-top:22px;color:var(--muted);font-size:12px;text-align:center}
+@media (max-width:880px){ .layout{grid-template-columns:1fr} .toc{position:static;order:-1} }
+@media print{ body{background:#fff} .toc{display:none} .layout{grid-template-columns:1fr} .task{break-inside:avoid;box-shadow:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="card">
+    <h1>MmitekkUE5 portfolio site</h1>
+    <div class="sub">D:\GitHub\MmitekkUE5\.work-report\REPORT.md</div>
+    <div class="chips"><span class="chip"><b>Область:</b> MmitekkUE5</span><span class="chip"><b>Статус:</b> done</span><span class="chip"><b>Обновлено:</b> 2026-10-31 01:09</span></div>
+  </header>
+  <div class="layout">
+    <main>
+      <section class="state" id="sec-state"><h2 id="текущее-состояние">Текущее состояние</h2><p><strong>Где остановились:</strong> Сайт-портфолио полностью собран и опубликован на GitHub Pages; последняя задача — добавлен CrowVFXUE5 (№01), нумерация сдвинута до 11, счётчики обновлены, задеплоено и проверено на живой версии.</p><p><strong>Что проверено:</strong> Живой сайт https://mmitekk.github.io/MmitekkUE5/ в браузере: 11 карточек, модалка CrowVFXUE5 (3 абзаца RU/EN, теги «Runtime · UE 5.2», ссылка верная), EN-описание первой строки, счётчик «11»; Pages-билд abfef91 = built; скриншот списка сделан.</p><p><strong>Следующий шаг:</strong> По запросу пользователя — новые плагины добавлять по той же схеме (4 места правки). Возможный кандидат — публичный репо UnrealConfigGuard, пользователь пока не просил.</p><p><strong>Не повторять:</strong> Для теста сайта в браузере автоматизации ZCode IAB: клики и reveal-анимации там не работают (кадры заморожены) — проверять через evaluate + инъекцию стиля <code>transition:none</code> + принудительный <code>.on</code>; для реальных браузеров это не баг. PATH в Git Bash сломан — задавать явно (<code>export PATH="/mingw64/bin:/usr/bin:/c/Python312:/c/Program Files/nodejs:$PATH"</code>).</p></section>
+      <section class="card" id="sec-stages"><h2 id="этапы">Этапы</h2><div class="tw"><table><thead><tr><th>Этап</th><th>Статус</th><th>Итог</th></tr></thead><tbody><tr><td>—</td><td>—</td><td>—</td></tr></tbody></table></div></section>
+      <section class="card" id="sec-howto"><h2 id="как-продолжить">Как продолжить</h2><p><strong>Окружение:</strong> Сайт = один статический <code>index.html</code> в корне репозитория D:\GitHub\MmitekkUE5 (без сборки). GitHub Pages: ветка main, корень <code>/</code>, включён через API. Пуш: <code>git -C /d/GitHub/MmitekkUE5 push origin main</code> (remote закреплён за аккаунтом Mmitekk: <code>https://Mmitekk@github.com/...</code>).</p><p><strong>Команды:</strong> Ожидание деплоя: <code>curl -s -H "Authorization: token $TOKEN" https://api.github.com/repos/Mmitekk/MmitekkUE5/pages/builds/latest</code> (TOKEN из <code>git credential fill</code>). Публичность репо: <code>PATCH /repos/{owner}/{repo} {"private":false}</code>. Синтаксис-чек JS: извлечь последний <code>&lt;script&gt;</code> блок и <code>node --check</code>.</p><p><strong>Точки входа:</strong> Правки плагинов — 4 места в index.html: HTML-строка карточки (<code>a.repo</code>), I18N словари ru/en (<code>repo.X</code>), REPO_DATA в JS (num/name/tags/абзацы ru+en), счётчики «11» (hero-stats + section-head). После правок: commit → push → дождаться Pages build → проверить живую версию.</p></section>
+      <section class="task" id="task-1"><div class="task-h"><span class="task-n">1</span><h2>Добавление CrowVFXUE5 на сайт — 2026-10-31</h2></div><div class="task-b"><p><strong>Агент:</strong> ZCode (GLM)</p><h3 id="что-сделано">Что сделано</h3><ul class="lst"><li>Собраны данные по репозиторию CrowVFXUE5 (публичный, desc «A raven (or a flock) that flies away as one approaches it», C++, UE 5.2): README прочитан полностью — три актора (BP_Crow/BP_Snowman/BP_CrowTrigger), BP_CrowFlock со сплайном и per-bird записью, три группы звука (Idle Caw/Alarm/Take Off), Auto Align Mesh Forward, требование пакета Animal Variety Pack.</li><li>Добавлен первым (№01) на сайт: карточка с кратким описанием и тегом «Runtime · UE 5.2», модалка с 3 абзацами RU и EN по фактическому README.</li><li>Существующие 10 карточек перенумерованы (02–11), обновлены num в REPO_DATA, счётчики «10» → «11» (hero-stats и section-head).</li><li>Коммит «Add CrowVFXUE5 plugin» (abfef91) запушен, Pages-билд дождан (built), живая версия проверена.</li></ul><h3 id="изменённые-файлы">Изменённые файлы</h3><ul class="lst"><li><code>index.html</code> — новая карточка №01, новый блок REPO_DATA CrowVFXUE5, ключи <code>repo.crow</code> в обоих I18N-словарях, перенумерация карточек и REPO_DATA, счётчики 10→11.</li></ul><h3 id="как-проверить">Как проверить</h3><ul class="lst"><li>Открыть https://mmitekk.github.io/MmitekkUE5/ — 11 строк, №01 = CrowVFXUE5 «Runtime · UE 5.2».</li><li>Клик по строке — модалка: 3 абзаца (RU/EN), кнопка «Открыть репозиторий» ведёт на github.com/Mmitekk/CrowVFXUE5.</li><li>Счётчики: «11 repositories/репозиториев» в герое и «11» у заголовка секции.</li></ul><h3 id="решения-и-допущения">Решения и допущения</h3><ul class="lst"><li>CrowVFXUE5 поставлен первым как самый свежий плагин (создан 2026-10-25) — без вопроса пользователю: при прошлых добавлениях порядок «новые сверху» уже устоялся.</li><li>Репозиторий уже публичный — переключение видимости не требовалось (в отличие от WaterFaucet/ShowerNiagara).</li><li>В абзацах модалки упомянуто требование Animal Variety Pack (SK_Crow, анимации, звуки) — критично для установки, без него BP «битые».</li></ul><h3 id="открытые-вопросы-и-риски">Открытые вопросы и риски</h3><ul class="lst"><li>Версии движков остальных 10 репо не перепроверялись в этот раз (последняя сверка 2026-10-18: всё актуально; SubsystemGameInstance без диапазона в README).</li><li>UnrealConfigGuard (публичный, июльский) на сайте отсутствует — пользователь не просил.</li></ul></div></section>
+    </main>
+    <nav class="toc"><div class="toc-t">Содержание</div><ol><li class="toc-sec"><a href="#sec-state">Текущее состояние</a></li><li class="toc-sec"><a href="#sec-stages">Этапы</a></li><li class="toc-sec"><a href="#sec-howto">Как продолжить</a></li><li><a href="#task-1">Задача 1 — Добавление CrowVFXUE5 на сайт — 2026-10-31</a></li></ol></nav>
+  </div>
+  <footer>Сгенерировано из D:\GitHub\MmitekkUE5\.work-report\REPORT.md · 2026-10-31 01:09</footer>
+</div>
+</body>
+</html>
