@@ -1,7 +1,7 @@
 <!-- work-report
 scope: MmitekkUE5
 root: D:\GitHub\MmitekkUE5
-updated: 2026-11-03T22:00:54.386Z
+updated: 2026-11-21T16:17:01.483Z
 status: done
 -->
 
@@ -10,18 +10,18 @@ status: done
 
 # MmitekkUE5 portfolio site
 
-_Обновлено: 2026-11-04 03:00 · Статус: done · Область: MmitekkUE5_
+_Обновлено: 2026-11-21 21:17 · Статус: done · Область: MmitekkUE5_
 
 <!-- state -->
 ## Текущее состояние
 
-**Где остановились:** На сайте 13 репозиториев: добавлены два браузерных расширения — BrowserTabAudioMixer (№01, Opera GX sidebar) и BrowserStorageProfileSwitcher (№02, MV3), существующие 11 перенумерованы (03–13), версии всех перепроверены по свежим README (без изменений). Задеплоено (коммит 68f8305, Pages = built) и проверено на живой версии (DOM-проверки + скриншот).
+**Где остановились:** На сайте 17 репозиториев четырёх типов: добавлены LaunchQueue (№01, App Windows C#), Adaptive-Lab (№02, Web Tool JS), PinRefBoard (№03, Web Site JS), IPWatch (№04, App Windows C#); прежние 13 перенумерованы (05–17), версии всех перепроверены по свежим README (без изменений). Задеплоено (коммит 6eb6298, Pages = built), живая версия проверена (DOM-проверки + скриншот).
 
-**Что проверено:** Живой сайт: 13 карточек, модалки обоих новых расширений (3 абзаца RU/EN, теги «Extension · Opera GX · JS» / «Extension · MV3 · JS»), счётчики «13», чип «C++ · BP · Python · JS», hero-sub упоминает browser extensions в EN, CrowVFXUE5 теперь 03. Синтаксис JS (node --check) до пуша.
+**Что проверено:** Живой сайт: 17 карточек, модалки LaunchQueue и IPWatch (3 абзаца RU/EN, верные теги и ссылки), счётчики «17», чип «C++ · BP · Python · C# · JS», hero-sub (RU/EN) упоминает browser extensions + Windows utilities + web projects, Mixer теперь 05. Синтаксис JS (node --check) до пуша.
 
-**Следующий шаг:** По запросу — новые плагины по той же схеме (4 места правок). Версии движков не менялись с 18.10; SubsystemGameInstance по-прежнему без диапазона в README.
+**Следующий шаг:** По запросу — новые проекты по той же схеме (4 места правок). Версии UE-плагинов не менялись с 18.10; SubsystemGameInstance по-прежнему без диапазона в README.
 
-**Не повторять:** Тест в браузере автоматизации ZCode IAB: клики/анимации не работают — только evaluate + инъекция `transition:none` + принудительный `.on`. PATH в Git Bash сломан — задавать явно (`export PATH="/mingw64/bin:/usr/bin:/c/Python312:/c/Program Files/nodejs:$PATH"`).
+**Не повторять:** Пуш 403 «denied to Mmitekk» при валидном токене = fine-grained PAT с read-only Contents (API permissions.push=true обманчив, git-пуш режет). Фикс: `git-credential-manager github logout Mmitekk` + push (браузерная реавторизация) — сработал и 14.10, и 21.11. Тест сайта в ZCode IAB: только evaluate + инъекция `transition:none` + принудительный `.on`. PATH в Git Bash задавать явно (`export PATH="/mingw64/bin:/usr/bin:/c/Python312:/c/Program Files/nodejs:$PATH"`).
 
 <!-- stages -->
 ## Этапы
@@ -33,11 +33,11 @@ _Обновлено: 2026-11-04 03:00 · Статус: done · Область: M
 <!-- howto -->
 ## Как продолжить
 
-**Окружение:** Сайт = один статический `index.html` в корне D:\GitHub\MmitekkUE5 (без сборки). GitHub Pages: ветка main, корень `/`. Пуш: `git -C /d/GitHub/MmitekkUE5 push origin main` (remote закреплён за аккаунтом Mmitekk).
+**Окружение:** Сайт = один статический `index.html` в корне D:\GitHub\MmitekkUE5 (без сборки). GitHub Pages: ветка main, корень `/`. Пуш: `git -C /d/GitHub/MmitekkUE5 push origin main` (remote закреплён за Mmitekk: `https://Mmitekk@github.com/...`).
 
-**Команды:** Ожидание деплоя: `curl -s -H "Authorization: token $TOKEN" https://api.github.com/repos/Mmitekk/MmitekkUE5/pages/builds/latest` (TOKEN из `git credential fill`). Синтаксис-чек JS: извлечь последний `<script>` блок в temp-файл и `node --check`.
+**Команды:** Ожидание деплоя: `curl -s -H "Authorization: token $TOKEN" https://api.github.com/repos/Mmitekk/MmitekkUE5/pages/builds/latest` (TOKEN из `git credential fill`; после logout — берёт свежий OAuth). Синтаксис-чек JS: извлечь последний `<script>` блок и `node --check`.
 
-**Точки входа:** Правки — 4 места в index.html: карточки `a.repo`, I18N словари ru/en (`repo.X`, `hero.sub`), REPO_DATA в JS (num/name/tags/абзацы ru+en), счётчики (hero-stats + section-head). Теперь в портфолио два типа проектов: UE5-плагины (теги с версией UE) и браузерные расширения (теги «Extension · браузер · JS»).
+**Точки входа:** Правки — 4 места в index.html: карточки `a.repo`, I18N словари ru/en (`repo.X`, `hero.sub`), REPO_DATA в JS (num/name/tags/абзацы ru+en), счётчики (hero-stats + section-head). Типы проектов и их теги: UE5 «Runtime/Editor/VFX · UE …», расширения «Extension · … · JS», вин-утилиты «App · Windows · C#», веб-проекты «Web Tool/Web Site · JS».
 
 <!-- task:1 -->
 ## Задача 1 — Добавление CrowVFXUE5 на сайт — 2026-10-31
@@ -95,4 +95,34 @@ _Обновлено: 2026-11-04 03:00 · Статус: done · Область: M
 
 ### Открытые вопросы и риски
 - Заголовок-кикер «Unreal Engine 5 · Open Source» и бегущая строка не менялись (минимальное вмешательство); если расширений станет больше — возможно, стоит выделить их в отдельную секцию.
+- UnrealConfigGuard (публичный UE-репо) по-прежнему не на сайте — пользователь не просил.
+
+<!-- task:3 -->
+## Задача 3 — LaunchQueue + Adaptive-Lab + PinRefBoard + IPWatch и актуализация — 2026-11-21
+
+**Агент:** ZCode (GLM)
+
+### Что сделано
+- Данные по четырём публичным репо (описаний в API нет — факты из README): LaunchQueue (C#/WinForms/.NET 9: очередь запуска с интервалами/задержками, окна по мониторам, JSON-профили, закрытие окна по таймеру в v1.1.0), Adaptive-Lab (монохромная лаборатория адаптивности на Pages+Actions: настоящий Chromium, снимки, свои эвристики вместо алгоритма Яндекс.Вебмастера), PinRefBoard (витрина пинов досок character/reference: masonry, монохром+цвет по наведению, модалка orig с зумом, синк кнопкой/Actions 04:00 UTC), IPWatch (трей Windows: внешний IP, флаг страны VPN-узла, живые часы по IP, пинг, шлюз, провайдер; самодостаточный exe).
+- Все четыре добавлены первыми (№01–04, в порядке перечисления пользователем), карточки + модалки 3 абзаца RU/EN; прежние 13 перенумерованы (05–17) в карточках и REPO_DATA; счётчики 13 → 17.
+- Актуализация: версии/описания всех 13 существующих сверены по свежим README — изменений нет.
+- Сайт подстроен: hero-sub (RU/EN) — «плюс браузерные расширения, утилиты для Windows и веб-проекты», чип «C++ · BP · Python · C# · JS».
+- Коммит 6eb6298 запушен (после починки 403), Pages-билд дождан, живая версия проверена в браузере (DOM-проверки + скриншот).
+
+### Изменённые файлы
+- `index.html` — четыре новые карточки и четыре блока REPO_DATA, ключи `repo.launchqueue`/`repo.adaptivelab`/`repo.pinrefboard`/`repo.ipwatch` в обоих I18N-словарях, перенумерация карточек и REPO_DATA, счётчики 13→17, hero-sub и чип (RU/EN).
+
+### Как проверить
+- Открыть https://mmitekk.github.io/MmitekkUE5/ — 17 строк: №01 LaunchQueue «App · Windows · C#», №02 Adaptive-Lab «Web Tool · JS», №03 PinRefBoard «Web Site · JS», №04 IPWatch «App · Windows · C#», №05 BrowserTabAudioMixer.
+- Клик по каждой новой строке — модалка с 3 абзацами (RU/EN) и кнопкой-ссылкой на репозиторий.
+- Герой: «17 репозиториев», чип «C++ · BP · Python · C# · JS».
+
+### Решения и допущения
+- Порядок новых — по перечислению пользователя (по датам создания был бы IPWatch/LaunchQueue/Adaptive-Lab/PinRefBoard); в прошлые разы порядок перечисления уже устоялся как норма.
+- «Актуализировать» = сверка версий по README (выполнено) + подстройка героя под новые типы проектов (четвёртое расширение портфолио за месяц: UE5 → +расширения → +вин-утилиты и веб-проекты).
+- GitHub-описания у всех четырёх репо пустые — не мешает сайту (тексты берутся из REPO_DATA), но стоит заполнить поля About на GitHub.
+
+### Открытые вопросы и риски
+- 403 при пуше вернулся: у Mmitekk в GCM оказалась fine-grained PAT с read-only Contents; вылечено logout+реавторизацией. Если повторится — тот же рецепт (записан в state).
+- Список из 17 строк уже длинный: типы смешаны в одном списке; если продолжит расти — стоит подумать о группировке по секциям (UE5 / расширения / утилиты / веб).
 - UnrealConfigGuard (публичный UE-репо) по-прежнему не на сайте — пользователь не просил.
